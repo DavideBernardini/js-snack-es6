@@ -57,6 +57,8 @@ const numeroRandom = (min, max) => Math.floor(Math.random() *(max - min + 1)) + 
 
 const squadreNomeFalli = [];
 
+console.log(squadreNomeFalli);
+
 for ( let i = 0; i < squadre.length; i++ ) {
 
     squadre[i].puntiFatti = numeroRandom(10, 100);
