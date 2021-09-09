@@ -54,23 +54,36 @@ const numeroRandom = (min, max) => Math.floor(Math.random() *(max - min + 1)) + 
 
 // assegno alle proprietà punti fatti e falli subiti un valore random per ogni squadra
 // creo un nuovo array con solo nome e falli subiti dalle squadre
-
 const squadreNomeFalli = [];
 
 console.log(squadreNomeFalli);
 
+let puntiSquadre = [];
+while (puntiSquadre.length < squadre.length) {
+    let rndNum = numeroRandom(10, 100);
+    if (puntiSquadre.includes(rndNum) == false) {
+        puntiSquadre.push(rndNum);
+    }
+}
+
+let falliSquadre = [];
+while (falliSquadre.length < squadre.length) {
+    let rndNum = numeroRandom(250, 400);
+    if (falliSquadre.includes(rndNum) == false) {
+        falliSquadre.push(rndNum);
+    }
+} 
+
 for ( let i = 0; i < squadre.length; i++ ) {
 
-    squadre[i].puntiFatti = numeroRandom(10, 100);
-    squadre[i].falliSubiti = numeroRandom(250, 400);
+    squadre[i].puntiFatti = puntiSquadre[i];
+    squadre[i].falliSubiti = falliSquadre[i];
 
     let {nome, falliSubiti} = squadre[i];
-
     let sNf = {
         nome,
         falliSubiti
     };
-
     squadreNomeFalli.push(sNf);
 
     console.log(`Squadra: ${nome} - Falli subiti: ${falliSubiti}`);
