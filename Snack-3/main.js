@@ -17,6 +17,8 @@ console.log(numA);
 console.log(numB);
 
 // creo un array con le lettere comprese fra gli indici che corrispondono ai numeri generati
-const intervalloAlfabeto = alfabeto.filter((elm, i) => i >= numA && i <= numB);
+const intervalloAlfabeto = alfabeto.filter((elm, i) => 
+    i >= numA && i <= numB
+);
 
 console.log(intervalloAlfabeto);
