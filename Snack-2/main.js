@@ -80,11 +80,11 @@ for ( let i = 0; i < squadre.length; i++ ) {
     squadre[i].falliSubiti = falliSquadre[i];
 
     let {nome, falliSubiti} = squadre[i];
-    let sNf = {
+
+    squadreNomeFalli.push({
         nome,
         falliSubiti
-    };
-    squadreNomeFalli.push(sNf);
+    });
 
     console.log(`Squadra: ${nome} - Falli subiti: ${falliSubiti}`);
 }
